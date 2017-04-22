@@ -22,7 +22,7 @@ int main() {
 
         for (i = MAX - 1; i > 0; i--) {
             k += tab[i];
-            result += (float) tab[i] * (n + 1)/(k + 1);
+            result += (double) tab[i] * (n + 1)/(k + 1);
         }
         printf("%.2f\n", result);
     }
