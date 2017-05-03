@@ -16,7 +16,7 @@ void push_element(struct node **head, int data) {
 }
 
 void clear(struct node *head) {
-    if(head) {
+    if (head) {
         clear(head->next);
         free(head);
     }
@@ -35,15 +35,15 @@ void dfs(struct node **tab, char *visited, int start) {
 
 int main() {
     int q;
-    scanf("%d",&q);
+    scanf("%d", &q);
     struct node *tab[MAX]={};
     char visited[MAX]={};
-    for(int a0 = 0; a0 < q; a0++){
+    for (int a0 = 0; a0 < q; a0++){
         int n, m, road_cost, lib_cost; 
         int city_1, city_2; 
         scanf("%d %d %d %d", &n, &m, &lib_cost, &road_cost);
 
-        for(int a1 = 0; a1 < m; a1++) {
+        for (int a1 = 0; a1 < m; a1++) {
             scanf("%d %d", &city_1, &city_2);
             push_element(&tab[city_1], city_2);
             push_element(&tab[city_2], city_1);
